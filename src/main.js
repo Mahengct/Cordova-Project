@@ -6,13 +6,13 @@ Vue.use(VueRouter)
 
 import DogsView from './components/DogsView'
 import HomeView from './components/HomeView'
- // import LoginView from './components/Login'
+import LoginView from './components/Login'
 
  // Routes
 const routes = [
   { path: '/dogs', name: 'dogs', component: DogsView },
   { path: '/', name: 'root', component: HomeView },
-  //  { path: '/login', name: 'login', component: LoginView },
+    { path: '/login', name: 'login', component: LoginView },
   // Se não cair em nenhuma rota acima
   { path: '*', component: HomeView }
 ]

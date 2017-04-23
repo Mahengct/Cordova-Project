@@ -1,10 +1,11 @@
 <template>
   <div class="hello">
-    <h6>Menu3</h6>
+    <h6>MenuMahen</h6>
     <ul>
       <li><router-link :to=" { name: 'root' }">Home1</router-link></li>
-     <!-- <li><router-link :to=" { name: 'login' }">login</router-link></li>
-	  <li><router-link :to=" { name: 'login' }">Login</router-link></li> -->
+      <li><router-link :to=" { name: 'login' }">myloginAppNav</router-link></li>
+      <li><router-link :to=" { name: 'login1' }">mylogin1AppNav</router-link></li>
+	  <li><router-link :to=" { name: 'login2' }">Login2AppNav</router-link></li>
     </ul>
   </div>
 </template>

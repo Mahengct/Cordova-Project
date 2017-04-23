@@ -1,4 +1,5 @@
 <template>
+<template>
 <div class="container main">
     <div class="row">
         <div class="seven columns iphone">
@@ -30,34 +31,36 @@
 </template>
 <script>
     export default {
-        data() {
-            return {
-                context: 'login context',
-                data: {
-                    body: {
-                        email: '',
-                        password: ''
-                    },
-                    autoLogin: false,
-                    rememberMe: false
-                },
-                error: null
-            };
-        },
-
-        methods: {
-            login() {
-                this.$auth.login({
-                    body: this.data.body,
-                    redirect: {name: 'find'},
-                    success() {
-                    },
-                    error(res) {
-                        console.log(res);
-                        this.error = res.data.msg;
-                    }
-                });
-            }
+      data () {
+        return {
+          context: 'login context',
+          data: {
+            body: {
+              email: '',
+              password: ''
+            },
+            autoLogin: false,
+            rememberMe: false
+          },
+          error: null
         }
+      },
+
+      methods: {
+        login () {
+          this.$auth.login({
+            body: this.data.body,
+            redirect: {name: 'find'},
+            success () {
+              console.log('Mahendran in Login.vue success')
+            },
+            error (res) {
+              console.log(res)
+              console.log('Mahendran in Login.vue error')
+              this.error = res.data.msg
+            }
+          })
+        }
+      }
     }
 </script>
